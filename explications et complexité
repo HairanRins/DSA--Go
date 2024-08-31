@@ -1,0 +1,25 @@
+* Explication du Code : 
+
+   - Initialisation : On commence avec une fonction insertionSort qui prend en argument un tableau d'entiers (arr []int).
+
+   - Boucle Externe : La boucle externe for i := 1; i < len(arr); i++ parcourt le tableau à partir du deuxième élément (index 1) jusqu'à la fin.
+
+   - Sélection de la Clé : Pour chaque itération, on définit une variable key qui est l'élément actuel du tableau que nous voulons insérer à la bonne position dans la partie triée du tableau.
+
+   - Boucle Interne : La boucle interne for j >= 0 && arr[j] > key vérifie les éléments de la partie triée du tableau (c'est-à-dire tous les éléments à gauche de l'index i) et les déplace d'une position à droite si ils sont plus grands que key.
+
+   - Insertion de la Clé : Une fois la bonne position trouvée, key est inséré à cet endroit (arr[j+1] = key).
+
+   - Affichage des Résultats : Avant et après le tri, le tableau est imprimé pour montrer l'effet de l'algorithme.
+
+* Complexité de l'Algorithme
+
+   // Complexité en Temps :
+        Meilleur Cas : O(n) — se produit lorsque le tableau est déjà trié. Dans ce cas, chaque élément est comparé une seule fois.
+        Cas Moyen : O(n²) — se produit lorsqu'il y a environ la moitié des éléments qui sont dans le désordre.
+        Pire Cas : O(n²) — se produit lorsque le tableau est trié dans l'ordre inverse. Chaque insertion nécessite un déplacement de tous les éléments déjà triés.
+
+   // Complexité en Espace :
+        O(1) — l'algorithme utilise une quantité constante d'espace supplémentaire (uniquement quelques variables de support).
+
+Le tri par insertion est efficace pour les petites listes ou lorsque la liste est déjà presque triée, mais il n'est pas recommandé pour les grandes listes car la complexité en temps O(n²) peut entraîner des performances médiocres.
